@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>face analyza</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <h1> age ~ <%=faces[0].age %>  </h1>
+    <h2> gender = <%=faces[0].gender %> </h2>
+
+    <img src="<%= img%>" alt="uploaded image" />
+
+      <form action="/" enctype="multipart/form-data" method="post">
+      <input type="file" name="file-to-upload" />
+      <input type="submit" value="Upload" />
+    </form>
+  </body>
+</html>
