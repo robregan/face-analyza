@@ -79,8 +79,10 @@ app.post("/", upload.single("file-to-upload"), async (req, res) => {
 
      // Print the bounding box, gender, and age from the faces.
      if (faces.length) {
+       
        console.log(`${faces.length} face${faces.length == 1 ? '' : 's'} found:`);
        for (const face of faces) {
+         
          console.log(`    Gender: ${face.gender}`.padEnd(20)
            + ` Age: ${face.age}`.padEnd(10) + `at ${formatRectFaces(face.faceRectangle)}`);
        }

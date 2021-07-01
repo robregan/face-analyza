@@ -7,11 +7,26 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    
-    <h1> age ~ <%=faces[0].age %>  </h1>
-    <h2> gender = <%=faces[0].gender %> </h2>
+    <% if(faces.length) { %>
 
-    <img src="<%= img%>" alt="uploaded image" />
+      <img src="<%= img%>" alt="uploaded image" /><br>
+
+     <h1> Faces found: <%=faces.length%> </h1>
+      <ul>
+        <% for(let i = 0; i < faces.length; i++) { %>
+           <li> <h2> age: <%= faces[i].age %> </h2> </li>
+           <li> <h2> gender: <%=faces[i].gender %> </h2> </li>
+       <% } %>
+
+
+      
+
+    <% }else{ %>
+      <img src="<%= img%>" alt="uploaded image" /><br>
+      <h1>No faces detected</h1>
+      
+      <% } %>
+    
 
       <form action="/" enctype="multipart/form-data" method="post">
       <input type="file" name="file-to-upload" />
