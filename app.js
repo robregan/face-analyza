@@ -103,6 +103,7 @@ app.post("/", upload.single("file-to-upload"), async (req, res) => {
   
     res.render("result.ejs", { faces: faces, img: facesImageURL });
   } catch (err) {
+    res.redirect('/')
     console.log(err);
   }
 });
