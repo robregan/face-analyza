@@ -5,6 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bona+Nova:ital@1&family=Uchen&display=swap" rel="stylesheet">
   </head>
   <body>
     <% if(faces.length) { %>
@@ -14,19 +17,20 @@
      <h1> Faces found: <%=faces.length%> </h1>
       <ul>
         <% for(let i = 0; i < faces.length; i++) { %>
-           <li> <h2> age: <%= faces[i].age %> </h2> </li>
-           <li> <h2> gender: <%=faces[i].gender %> </h2> </li>
+           <li> <h4> age: <%= faces[i].age %> </h4> </li>
        <% } %>
 
-
-      
 
     <% }else{ %>
       <img src="<%= img%>" alt="uploaded image" /><br>
       <h1>No faces detected</h1>
       
       <% } %>
-    
+<!--     
+      <h3>Did I guess within 4 years of your actual age?</h3>
+      
+      <a href="winner.ejs">nope</a> -->
+
 
       <form action="/" enctype="multipart/form-data" method="post">
       <input type="file" name="file-to-upload" />
