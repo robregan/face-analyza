@@ -13,7 +13,7 @@
     <% if(faces.length) { %>
 
       <img src="<%= img%>" alt="uploaded image" /><br>
-      <img src="Futurama_robot_gypsy.jpg" alt="robot gypsy">
+      <img src="Futurama_robot_gypsy.jpg" id = "robot" alt="robot gypsy">
      <h1> Faces found: <%=faces.length%> </h1>
       <ul>
         <% for(let i = 0; i < faces.length; i++) { %>
@@ -23,6 +23,7 @@
 
     <% }else{ %>
       <img src="<%= img%>" alt="uploaded image" /><br>
+      <img src="Futurama_robot_gypsy.jpg" id = "robot" alt="robot gypsy">
       <h1>No faces detected</h1>
       
       <% } %>
